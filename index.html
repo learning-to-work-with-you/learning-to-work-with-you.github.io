@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Learning to Work with You — The 1st Workshop on User-Specific Interaction Learning (USIL), proposed for ICLR 2027." />
   <meta name="theme-color" content="#ffffff" />
-  <title>Learning to Work with You — USIL</title>
+  <title>Learning to Work with You — USIL Workshop (proposed, ICLR 2027)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://learning-to-work-with-you.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Learning to Work with You — Proposed ICLR 2027 Workshop on User-Specific Interaction Learning" />
+  <meta property="og:description" content="Learning to Work with You — The 1st Workshop on User-Specific Interaction Learning (USIL), proposed for ICLR 2027." />
+  <meta property="og:url" content="https://learning-to-work-with-you.github.io/" />
+  <meta property="og:image" content="https://learning-to-work-with-you.github.io/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Learning to Work with You: The 1st Workshop on User-Specific Interaction Learning (USIL)", "description": "A proposed ICLR 2027 workshop on how AI agents can learn to work with each person. Subject to acceptance.", "url": "https://learning-to-work-with-you.github.io/", "eventStatus": "https://schema.org/EventScheduled", "about": "User-Specific Interaction Learning", "organizer": {"@type": "Organization", "name": "User-Specific Interaction Learning (USIL)", "url": "https://learntoworkwithyou.org"}}</script>
   <style>
     :root {
       --ink: #10273a;
@@ -17,8 +30,8 @@
       --line2: #edf2f5;
       --shadow: 0 18px 50px rgba(23, 55, 75, .08);
       --max: 1180px;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: Manrope, ui-sans-serif, system-ui, sans-serif;
+      --sans: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -76,7 +89,7 @@
     }
     .brand {
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: 1.19rem;
       font-weight: 700;
       letter-spacing: -.02em;
       display: flex;
@@ -95,7 +108,7 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      font-size: .86rem;
+      font-size: 0.92rem;
       font-weight: 750;
       color: #526270;
     }
@@ -132,7 +145,7 @@
       align-items: center;
       text-transform: uppercase;
       letter-spacing: .12em;
-      font-size: .71rem;
+      font-size: 0.8rem;
       font-weight: 850;
       color: #61707c;
       margin-bottom: 18px;
@@ -145,13 +158,13 @@
     }
     h1 {
       font-family: var(--serif);
-      font-size: clamp(4rem, 7.6vw, 7.35rem);
-      line-height: .87;
-      letter-spacing: -.067em;
+      font-size: clamp(3.2rem, 6vw, 5.8rem);
+      line-height: .95;
+      letter-spacing: -.05em;
       margin: 0 0 25px;
       font-weight: 700;
     }
-    h1 .you { color: var(--blue); font-weight: 500; font-style: italic; }
+    h1 .you { color: var(--blue); font-weight: 700; }
     .hero-question {
       font-family: var(--serif);
       font-size: clamp(1.35rem, 2vw, 1.92rem);
@@ -159,14 +172,14 @@
       margin: 0 0 17px;
       max-width: 550px;
     }
-    .hero-sub { color: var(--muted); font-size: 1.02rem; max-width: 590px; margin: 0; }
+    .hero-sub { color: var(--muted); font-size: 1.06rem; max-width: 590px; margin: 0; }
     .hero-meta { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 24px; }
     .chip {
       padding: 7px 10px;
       border-radius: 999px;
       background: #fff;
       border: 1px solid #dce9ef;
-      font-size: .76rem;
+      font-size: 0.8rem;
       font-weight: 760;
       color: #536674;
       box-shadow: 0 5px 18px rgba(40, 79, 101, .035);
@@ -200,7 +213,7 @@
       border: 1px solid var(--line);
       border-radius: 13px;
       box-shadow: 0 12px 28px rgba(30, 61, 82, .07);
-      font-size: .74rem;
+      font-size: 0.8rem;
       font-weight: 800;
       color: #536675;
       backdrop-filter: blur(8px);
@@ -224,18 +237,19 @@
       transform: translateX(-50%);
       bottom: 8px;
       color: #84909a;
-      font-size: .72rem;
+      font-size: 0.8rem;
       white-space: nowrap;
     }
 
     section { position: relative; z-index: 1; padding: 86px 0; border-top: 1px solid rgba(229, 237, 241, .7); background: transparent; }
     section.alt { background: transparent; }
+    section.tint { background: #eef6fc; }
     .section-head { max-width: 850px; margin-bottom: 34px; }
     .kicker {
       text-transform: uppercase;
       letter-spacing: .14em;
       color: var(--orange);
-      font-size: .72rem;
+      font-size: 0.8rem;
       font-weight: 850;
     }
     h2 {
@@ -245,10 +259,10 @@
       letter-spacing: -.04em;
       margin: 8px 0 14px;
     }
-    .lead { font-size: 1.12rem; color: var(--muted); margin: 0; max-width: 830px; }
+    .lead { font-size: 1.16rem; color: var(--muted); margin: 0; max-width: 830px; }
 
     .about-grid { display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.32fr); gap: 34px; align-items: start; }
-    .about-copy { font-size: 1.02rem; }
+    .about-copy { font-size: 1.06rem; }
     .about-copy p { margin-top: 0; margin-bottom: 18px; }
     .manifesto {
       padding: 28px;
@@ -282,7 +296,7 @@
       gap: 6px;
       flex-wrap: nowrap;
       margin-top: 18px;
-      font-size: .8rem;
+      font-size: 0.86rem;
       font-weight: 750;
       color: #56626e;
     }
@@ -330,15 +344,15 @@
       transition: .22s transform, .22s box-shadow, .22s border-color;
     }
     .person:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #cfe1ea; }
-    .person strong { font-family: var(--serif); font-size: 1.18rem; line-height: 1.15; }
-    .affil { color: var(--muted); font-size: .88rem; margin-top: 4px; }
-    .topic { color: #455366; font-size: .92rem; margin-top: 10px; }
+    .person strong { font-family: var(--serif); font-size: 1.22rem; line-height: 1.15; }
+    .affil { color: var(--muted); font-size: 0.94rem; margin-top: 4px; }
+    .topic { color: #455366; font-size: 0.98rem; margin-top: 10px; }
     .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; }
     .badge {
       display: inline-flex;
       padding: 4px 8px;
       border-radius: 999px;
-      font-size: .72rem;
+      font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: .04em;
       text-transform: uppercase;
@@ -357,7 +371,7 @@
     table { width: 100%; border-collapse: collapse; min-width: 720px; }
     th, td { padding: 15px 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
     th {
-      font-size: .72rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: .1em;
       color: #73808b;
@@ -368,7 +382,7 @@
       background: #f4f9fc;
       color: #2b678e;
       font-weight: 850;
-      font-size: .79rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: .08em;
     }
@@ -382,7 +396,7 @@
       letter-spacing: .1em;
       color: #7a8790;
       font-weight: 800;
-      font-size: .68rem;
+      font-size: 0.8rem;
     }
     .stat strong { display: block; margin-top: 4px; font-family: var(--serif); font-size: 1.22rem; }
     .topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 24px; padding: 0; list-style: none; }
@@ -395,7 +409,7 @@
       background: #fff9ef;
       border: 1px solid #f2dfbf;
       color: #735c36;
-      font-size: .9rem;
+      font-size: 0.96rem;
     }
 
     .org-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
@@ -407,12 +421,12 @@
       transition: .2s transform, .2s box-shadow;
     }
     .org:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .org strong { display: block; font-family: var(--serif); font-size: 1.06rem; }
-    .org span { display: block; color: var(--muted); font-size: .82rem; margin-top: 4px; }
+    .org strong { display: block; font-family: var(--serif); font-size: 1.1rem; }
+    .org span { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
     .contact { margin-top: 24px; }
     .contact a { color: var(--blue); }
 
-    footer { position: relative; z-index: 1; padding: 36px 0 50px; border-top: 1px solid var(--line); color: #777f85; font-size: .86rem; }
+    footer { position: relative; z-index: 1; padding: 36px 0 50px; border-top: 1px solid var(--line); color: #777f85; font-size: 0.92rem; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -432,7 +446,7 @@
     @media (max-width: 720px) {
       .container { width: min(var(--max), calc(100% - 26px)); }
       .nav-inner { align-items: flex-start; flex-direction: column; padding: 12px 0; gap: 10px; }
-      .nav-links { gap: 12px; font-size: .82rem; }
+      .nav-links { gap: 12px; font-size: 0.88rem; }
       .hero-inner { padding: 48px 0 34px; }
       .hero-visual { min-height: 360px; margin: 0 -55px; }
       .about-grid, .qgrid, .people-grid { grid-template-columns: 1fr; }
@@ -447,7 +461,7 @@
       .org-grid, .cfp-top { grid-template-columns: 1fr; }
       .hero-visual { min-height: 300px; }
       .hero-meta { gap: 6px; }
-      .chip { font-size: .7rem; }
+      .chip { font-size: 0.8rem; }
     }
   </style>
 </head>
@@ -623,7 +637,7 @@
     </div>
   </section>
 
-  <section id="program">
+  <section id="program" class="tint">
     <div class="container">
       <div class="section-head">
         <div class="kicker">Tentative program</div>
@@ -656,7 +670,7 @@
     </div>
   </section>
 
-  <section id="cfp" class="alt">
+  <section id="cfp">
     <div class="container">
       <div class="section-head">
         <div class="kicker">Call for papers</div>
@@ -687,7 +701,7 @@
     </div>
   </section>
 
-  <section id="organizers">
+  <section id="organizers" class="tint">
     <div class="container">
       <div class="section-head">
         <div class="kicker">Organizing team</div>
@@ -709,7 +723,7 @@
   <footer>
     <div class="container footer-row">
       <div>Learning to Work with You · User-Specific Interaction Learning</div>
-      <div>Proposed for ICLR 2027</div>
+      <div>Proposed for ICLR 2027 · subject to acceptance · Part of the open <a href="https://learntoworkwithyou.org" target="_blank" rel="noopener">USIL research community</a></div>
     </div>
   </footer>
 </body>
