@@ -94,7 +94,7 @@
       letter-spacing: -.02em;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 22px;
     }
     .brand:hover { color: inherit; }
     .brand-dot {
@@ -158,17 +158,19 @@
     }
     h1 {
       font-family: var(--serif);
-      font-size: clamp(3.2rem, 6vw, 5.8rem);
-      line-height: .95;
+      font-size: clamp(2.5rem, 4vw, 3.2rem);
+      line-height: 1.02;
       letter-spacing: -.05em;
       margin: 0 0 25px;
       font-weight: 700;
     }
     h1 .you { color: var(--blue); font-weight: 700; }
+    /* Keep the first line whole at every width, so the title is always two lines. */
+    h1 .h1-line { white-space: nowrap; }
     .hero-question {
       font-family: var(--serif);
-      font-size: clamp(1.35rem, 2vw, 1.92rem);
-      line-height: 1.28;
+      font-size: clamp(1.2rem, 1.6vw, 1.55rem);
+      line-height: 1.32;
       margin: 0 0 17px;
       max-width: 550px;
     }
@@ -187,14 +189,14 @@
     .hero-visual {
       position: relative;
       min-width: 0;
-      min-height: 680px;
+      min-height: 600px;
       margin-right: -16px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .hero-visual img {
-      width: min(1080px, 134%);
+      width: min(900px, 112%);
       max-width: none;
       height: auto;
       display: block;
@@ -254,8 +256,8 @@
     }
     h2 {
       font-family: var(--serif);
-      font-size: clamp(2.3rem, 4vw, 3.65rem);
-      line-height: 1.05;
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
+      line-height: 1.1;
       letter-spacing: -.04em;
       margin: 8px 0 14px;
     }
@@ -438,7 +440,7 @@
       .hero-inner { grid-template-columns: 1fr; padding-top: 64px; }
       .hero-copy { max-width: 720px; }
       .hero-visual { min-height: 500px; margin: 0 -40px; }
-      .hero-visual img { width: min(980px, 120%); }
+      .hero-visual img { width: min(820px, 100%); }
       .people-grid { grid-template-columns: repeat(2, 1fr); }
       .org-grid { grid-template-columns: repeat(2, 1fr); }
       .floating-label { display: none; }
@@ -446,20 +448,44 @@
     @media (max-width: 720px) {
       .container { width: min(var(--max), calc(100% - 26px)); }
       .nav-inner { align-items: flex-start; flex-direction: column; padding: 12px 0; gap: 10px; }
-      .nav-links { gap: 12px; font-size: 0.88rem; }
+      .nav-links { gap: 16px; font-size: 0.86rem; flex-wrap: nowrap; overflow-x: auto; width: calc(100% + 13px); margin-right: -13px; padding: 2px 13px 4px 0; scrollbar-width: none; -webkit-overflow-scrolling: touch; mask-image: linear-gradient(to right, #000 85%, transparent); }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a { flex-shrink: 0; }
+      .brand { font-size: 1.08rem; }
       .hero-inner { padding: 48px 0 34px; }
-      .hero-visual { min-height: 360px; margin: 0 -55px; }
+      .hero-visual { min-height: 0; margin: 0 -14px; padding: 8px 0 24px; }
+      .hero-visual img { width: 104%; }
       .about-grid, .qgrid, .people-grid { grid-template-columns: 1fr; }
       .flowline { flex-wrap: wrap; }
       .cfp-top { grid-template-columns: repeat(2, 1fr); }
       .topics { grid-template-columns: 1fr; }
       section { padding: 64px 0; }
-      h1 { font-size: clamp(3.5rem, 18vw, 5.5rem); }
+      h1 { font-size: clamp(2rem, 9.2vw, 2.6rem); }
+      .stat { padding: 13px 14px; border-radius: 14px; }
+      .stat small { font-size: 0.68rem; }
+      .stat strong { font-size: 1rem !important; margin-top: 4px; }
+      .hero-question { font-size: 1.15rem; }
+      h2 { font-size: 1.6rem; line-height: 1.15; }
+      .qcard h3 { font-size: 1.08rem; }
+      /* Speaker cards match the organizer cards on phones. */
+      .person strong { font-size: 1.1rem; }
+      .person .affil { font-size: 0.88rem; }
+      .person .topic { font-size: 0.9rem; }
+      .lead { font-size: 1rem; }
+      /* Program: stack time above each session instead of a wide scrolling table. */
+      .program-wrap table { min-width: 0; }
+      .program-wrap thead { display: none; }
+      .program-wrap tr, .program-wrap td { display: block; }
+      .program-wrap td { padding: 10px 14px; font-size: 0.92rem; border-bottom: 0; }
+      .program-wrap tr { border-bottom: 1px solid var(--line); }
+      .program-wrap td.time { width: auto; padding-bottom: 0; font-size: 0.82rem; }
+      .program-wrap tr.session td { font-size: 0.72rem; padding: 10px 14px; }
       .hero-caption { display: none; }
     }
     @media (max-width: 480px) {
-      .org-grid, .cfp-top { grid-template-columns: 1fr; }
-      .hero-visual { min-height: 300px; }
+      .org-grid { grid-template-columns: 1fr; }
+      .cfp-top { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .hero-visual { min-height: 0; }
       .hero-meta { gap: 6px; }
       .chip { font-size: 0.8rem; }
     }
@@ -485,7 +511,7 @@
     <div class="container hero-inner">
       <div class="hero-copy">
         <div class="eyebrow"><i></i> Proposed ICLR 2027 Workshop</div>
-        <h1>Learning<br>to Work<br>with <span class="you">You</span></h1>
+        <h1><span class="h1-line">Learning to Work</span><br>with <span class="you">You</span></h1>
         <p class="hero-question">How should an AI agent learn to work with this particular user?</p>
         <p class="hero-sub">The 1st Workshop on <strong>User-Specific Interaction Learning (USIL)</strong> — learning when to ask, infer, act, defer, seek confirmation, explain, and return control from feedback over time.</p>
         <div class="hero-meta">
